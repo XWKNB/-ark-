@@ -6,7 +6,8 @@
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://www.android.com)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple.svg)](https://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-blue.svg)](https://developer.android.com/jetpack/compose)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![IDE](https://img.shields.io/badge/IDE-CodeAssist-orange.svg)](https://github.com/tyron12233/CodeAssist)
 
 ---
 
@@ -65,6 +66,17 @@
 
 ---
 
+## 💻 开发环境
+
+本项目使用 **CodeAssist** 开发（Android 端 IDE）。
+
+- **IDE**：[CodeAssist](https://github.com/tyron12233/CodeAssist)（Android 上的 Java/Kotlin IDE）
+- **构建系统**：`module.toml`（CodeAssist 的项目配置格式）
+- **开发设备**：Android 手机 / 平板
+- **无需 Android Studio**：整个项目可在手机上完成编码、编译、调试
+
+---
+
 ## 🔧 使用流程
 
 ### 📦 解包
@@ -73,6 +85,7 @@
 2. 填写 **输出文件夹路径**，例如 `/storage/emulated/0/ark_unpacked`
 3. 点击 **▶ 开始解包**
 4. 输出目录会生成 `_ark_manifest.json`，记录每个文件的原始信息：
+
    ```json
    {
      "ark_version": "1.6",
@@ -120,7 +133,7 @@ app/
 │   │   ├── values/              # 字符串、颜色、主题
 │   │   └── mipmap-*/            # 启动图标
 │   └── AndroidManifest.xml
-├── module.toml                  # 模块配置
+├── module.toml                  # CodeAssist 模块配置
 └── proguard-rules.pro
 ```
 
@@ -200,19 +213,17 @@ KEY   = (0x0132944F, 0x00025BA1, 0x0132944F, 0x009988B5)
 
 ## 🛠️ 构建
 
-### 使用 Android Studio
+### 使用 CodeAssist（推荐，手机端）
 
-```bash
-git clone https://github.com/你的用户名/glacier-ark-tool.git
-cd glacier-ark-tool
-./gradlew assembleDebug
-```
+1. 在 Android 设备上安装 [CodeAssist](https://github.com/tyron12233/CodeAssist)
+2. 用 CodeAssist 打开本仓库的源码目录
+3. CodeAssist 会读取 `module.toml` 自动加载项目
+4. 点击工具栏的 **Build** 按钮编译
+5. 生成的 APK 在 `app/build/outputs/apk/debug/` 下
 
-生成的 APK 在 `app/build/outputs/apk/debug/app-debug.apk`。
+### 使用 MT 管理器（替代方案）
 
-### 使用 MT 管理器
-
-1. 将项目文件夹放入 MT 管理器的工程目录
+1. 用 MT 管理器打开项目目录
 2. 进入 **AI 做应用** → 打开项目 → **构建**
 3. 生成 APK
 
@@ -222,7 +233,7 @@ cd glacier-ark-tool
 
 ## 📥 下载
 
-前往 [Releases](https://github.com/你的用户名/glacier-ark-tool/releases) 页面下载最新 APK。
+前往 [Releases](https://github.com/XWKNB/-ark-/releases) 页面下载最新 APK。
 
 ---
 
@@ -248,18 +259,24 @@ cd glacier-ark-tool
 
 ## 📄 License
 
-[MIT License](LICENSE)
+[Apache License 2.0](LICENSE)
 
----
+Copyright 2026 XWKNB
 
-## 🙏 致谢
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-- 原始 Python 版工具的思路参考
-- Jetpack Compose 官方文档
-- 所有测试用户
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ---
 
 <p align="center">
-  <sub>Made with ❤️ for the ARK modding community</sub>
+  <sub>Made with ❤️ on Android with CodeAssist</sub>
 </p>
