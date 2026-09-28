@@ -231,6 +231,12 @@ KEY   = (0x0132944F, 0x00025BA1, 0x0132944F, 0x009988B5)
 
 ---
 
+## 📥 下载
+
+前往 [Releases](https://github.com/XWKNB/-ark-/releases) 页面下载最新 APK。
+
+---
+
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request。
